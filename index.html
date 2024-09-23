@@ -55,10 +55,171 @@
       </div>
       <div class="navbar-end flex gap-3 items-center">
         <img src="assets/coin.png" alt="" />
-        <h2 class="font-bold text-2xl">500</h2>
+        <h2 id="mainBalance" class="font-bold text-2xl">1300</h2>
       </div>
     </div>
     <!-- navbar section end -->
+    <!-- button section start -->
+    <div class="text-center mt-14">
+      <button
+        id="show-Donation-button"
+        onclick="setActive('show-Donation-button')"
+        class="btn bg-green-800 text-white px-7 py-2 rounded focus:outline-none"
+      >
+        Donation
+      </button>
+      <button
+        id="show-history-button"
+        onclick="setActive('show-history-button')"
+        class="btn bg-gray-800 hover:bg-none text-white px-7 py-2 rounded focus:outline-none"
+      >
+        History
+      </button>
+    </div>
+    <!-- button section end -->
+    <!-- maine section start -->
+    <main id="donation-section" class="mt-20">
+      <div class="flex gap-6">
+        <div>
+          <img src="assets/noakhali.png" alt="" />
+        </div>
+        <div class="w-1/2">
+          <div class="flex items-center gap-2">
+            <img src="assets/coin.png" alt="" />
+            <h1 class="font-bold"><span id="your-add-amount">0</span> BDT</h1>
+          </div>
+          <div>
+            <h1 id="heading" class="text-3xl font-bold mt-3">
+              Donate for Flood at Noakhali, Bangladesh
+            </h1>
+          </div>
+          <div>
+            <p class="mt-5 text-lg">
+              The recent floods in Noakhali have caused significant damage to
+              homes infrastructure. Your donation will help provide essential
+              supplies and to those affected by this disaster. Every
+              contribution, big or small, makes difference. Please join us in
+              supporting the relief efforts and making a positive impact on the
+              lives of those in need.
+            </p>
+          </div>
+          <div class="mt-7">
+            <input
+              type="text"
+              id="inputAddMoney"
+              class="border border-gray-500 p-2 rounded-md w-full"
+              placeholder="Enter Your Amount"
+            />
+          </div>
+          <div class="mt-6">
+            <button
+              id="add-amount"
+              class="btn bg-green-600 text-white px-7 w-full"
+            >
+              Donate Now
+            </button>
+          </div>
+        </div>
+      </div>
+      <!-- card number 2 -->
+      <div class="flex gap-6 mt-20">
+        <div>
+          <img src="assets/feni.png" alt="" />
+        </div>
+        <div class="w-1/2">
+          <div class="flex items-center gap-2">
+            <img src="assets/coin.png" alt="" />
+            <h1 class="font-bold"><span id="your-add-amount-2">0</span> BDT</h1>
+          </div>
+          <div>
+            <h1 id="heading-2" class="text-3xl font-bold mt-3">
+              Donate for Flood Relief in Feni,Bangladesh
+            </h1>
+          </div>
+          <div>
+            <p class="mt-5 text-lg">
+              The recent floods in Feni have devastated local communities,
+              leading to severe disruption and loss. Your generous donation will
+              help provide immediate aid, including food, clean water, and
+              medical supplies, to those affected by this calamity. Together, we
+              can offer crucial support and help rebuild lives in the aftermath
+              of this disaster. Every contribution counts towards making a real
+              difference. Please consider donating today to assist those in
+              urgent need.
+            </p>
+          </div>
+          <div class="mt-5">
+            <input
+              type="text"
+              id="inputAddMoney-2"
+              class="border border-gray-500 p-2 rounded-md w-full"
+              placeholder="Enter Your Amount"
+            />
+          </div>
+          <div class="mt-6">
+            <button
+              id="add-amount-2"
+              class="btn bg-green-600 text-white px-7 w-full"
+            >
+              Donate Now
+            </button>
+          </div>
+        </div>
+      </div>
+      <!-- card number 3 -->
+      <div class="flex gap-6 mt-20">
+        <div>
+          <img src="assets/quota-protest.png" alt="" />
+        </div>
+        <div class="w-1/2">
+          <div class="flex items-center gap-2">
+            <img src="assets/coin.png" alt="" />
+            <h1 class="font-bold"><span id="your-add-amount-3">0</span> BDT</h1>
+          </div>
+          <div>
+            <h1 id="heading-3" class="text-3xl font-bold mt-3">
+              Aid for Injured in the Quota Movement
+            </h1>
+          </div>
+          <div>
+            <p class="mt-5 text-lg">
+              The recent Quota movement has resulted in numerous injuries and
+              significant hardship for many individuals. Your support is crucial
+              in providing medical assistance, rehabilitation, and necessary
+              supplies to those affected. By contributing, you help ensure that
+              injured individuals receive the care and support they need during
+              this challenging time. Every donation plays a vital role in
+              alleviating their suffering and aiding in their recovery. Please
+              consider making a donation to support these brave individuals in
+              their time of need.
+            </p>
+          </div>
+          <div class="mt-7">
+            <input
+              type="text"
+              id="inputAddMoney-3"
+              class="border border-gray-500 p-2 rounded-md w-full"
+              placeholder="Enter Your Amount"
+            />
+          </div>
+          <div class="mt-6">
+            <button
+              id="add-amount-3"
+              class="btn bg-green-600 text-white px-7 w-full"
+            >
+              Donate Now
+            </button>
+          </div>
+        </div>
+      </div>
+    </main>
+    <!-- History section -->
+    <section id="history-section">
+      <div id="history-div-container"></div>
+    </section>
+    <!-- maine section end -->
+    <script src="js/utilities.js"></script>
     <script src="js/index.js"></script>
+    <script src="js/feature.js"></script>
   </body>
 </html>

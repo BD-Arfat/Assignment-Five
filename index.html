@@ -11,52 +11,27 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <title>Assignment Five</title>
   </head>
-  <body class="w-[1200px] mx-auto">
+  <body class="">
     <!-- navbar section start -->
     <div
       class="fixed bg-white bg-opacity-70 shadow-md top-0 left-0 w-full z-50 border-gray-100"
     >
-      <div class="navbar w-[1200px] mx-auto">
+      <div class="navbar md:w-[1200px] md:mx-auto">
         <div class="navbar-start">
           <div class="dropdown">
-            <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                class="h-5 w-5"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M4 6h16M4 12h8m-8 6h16"
-                />
-              </svg>
-            </div>
-            <ul
+            <div
               tabindex="0"
-              class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow"
-            >
-              <li><a>Item 1</a></li>
-              <li>
-                <a>Parent</a>
-                <ul class="p-2">
-                  <li><a>Submenu 1</a></li>
-                  <li><a>Submenu 2</a></li>
-                </ul>
-              </li>
-              <li><a>Item 3</a></li>
-            </ul>
+              role="button"
+              class="btn btn-ghost lg:hidden"
+            ></div>
           </div>
-          <a class="btn bg-green-600 text-white px-7">daisyUI</a>
+          <a class="btn bg-green-600 text-white px-10">daisyUI</a>
         </div>
-        <div class="navbar-center hidden lg:flex gap-2 items-center">
+        <div class="navbar-center hidden lg:flex">
           <img src="assets/logo.png" alt="" />
-          <h1 class="font-bold text-2xl">Donate Bangladesh</h1>
+          <h1 class="font-bold text-2xl ml-3">Donate Bangladesh</h1>
         </div>
-        <div class="navbar-end flex gap-3 items-center">
+        <div class="navbar-end">
           <img src="assets/coin.png" alt="" />
           <h2 id="mainBalance" class="font-bold text-2xl">1300</h2>
         </div>
@@ -83,13 +58,13 @@
     <!-- navbar section end -->
 
     <!-- maine section start -->
-    <main id="donation-section" class="mt-20 md:mt-52">
-      <div class="flex gap-6">
+    <main id="donation-section" class="mt-56 md:w-[1200px] md:mx-auto">
+      <div class="md:flex md:gap-6 rounded-xl p-3 m-5 shadow-xl">
         <div>
-          <img src="assets/noakhali.png" alt="" />
+          <img class="w-full" src="assets/noakhali.png" alt="" />
         </div>
-        <div class="w-1/2">
-          <div class="flex items-center gap-2">
+        <div class="md:w-1/2">
+          <div class="flex items-center gap-2 mt-3">
             <img src="assets/coin.png" alt="" />
             <h1 class="font-bold"><span id="your-add-amount">0</span> BDT</h1>
           </div>
@@ -127,11 +102,11 @@
         </div>
       </div>
       <!-- card number 2 -->
-      <div class="flex gap-6 mt-20">
+      <div class="md:flex md:gap-6 rounded-xl p-3 m-5 shadow-xl">
         <div>
-          <img src="assets/feni.png" alt="" />
+          <img class="w-full" src="assets/feni.png" alt="" />
         </div>
-        <div class="w-1/2">
+        <div class="md:w-1/2">
           <div class="flex items-center gap-2">
             <img src="assets/coin.png" alt="" />
             <h1 class="font-bold"><span id="your-add-amount-2">0</span> BDT</h1>
@@ -172,11 +147,11 @@
         </div>
       </div>
       <!-- card number 3 -->
-      <div class="flex gap-6 mt-20">
+      <div class="md:flex md:gap-6 rounded-xl p-3 m-5 shadow-xl">
         <div>
-          <img src="assets/quota-protest.png" alt="" />
+          <img class="w-full" src="assets/quota-protest.png" alt="" />
         </div>
-        <div class="w-1/2">
+        <div class="md:w-1/2">
           <div class="flex items-center gap-2">
             <img src="assets/coin.png" alt="" />
             <h1 class="font-bold"><span id="your-add-amount-3">0</span> BDT</h1>
@@ -219,10 +194,40 @@
       </div>
     </main>
     <!-- History section -->
-    <section class="mt-10 md:mt-52" id="history-section">
-      <div id="history-div-container"></div>
+    <section class="mt-10 md:mt-52 hidden" id="history-section">
+      <div
+        id="history-div-container"
+        class="mt-40 md:w-[1200px] md:mx-auto"
+      ></div>
     </section>
     <!-- maine section end -->
+    <!-- modal section start -->
+    <!-- Modal Structure -->
+    <div
+      id="donation-modal"
+      class="fixed inset-0 bg-gray-800 bg-opacity-75 flex items-center justify-center hidden"
+    >
+      <div class="bg-white p-6 rounded-lg shadow-lg w-96">
+        <h2 class="text-2xl font-bold mb-4 text-center">Congrates</h2>
+        <div class="">
+          <img class="mx-auto my-5" src="assets/coin.png" alt="" />
+        </div>
+        <p class="text-center text-gray-700">
+          You have successfully donated <span id="donated-amount"></span> Taka
+          for <span id="donation-heading"></span>.
+        </p>
+        <div class="mt-6 text-center">
+          <button
+            id="close-modal"
+            class="bg-green-600 text-white px-6 py-2 rounded hover:bg-green-500 focus:outline-none"
+          >
+            Close
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- modal section end -->
     <script src="js/utilities.js"></script>
     <script src="js/index.js"></script>
     <script src="js/feature.js"></script>

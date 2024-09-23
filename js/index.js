@@ -1,3 +1,4 @@
+// function 1
 document.getElementById("add-amount").addEventListener("click", function (e) {
   e.preventDefault();
   const inputAddMoney = getInputAddMoney("inputAddMoney");
@@ -14,7 +15,7 @@ document.getElementById("add-amount").addEventListener("click", function (e) {
     alert("You don't have enough money ");
     return;
   }
-
+  //There is addition, subtraction
   const myTotalAddAmount = myAddAmount + inputAddMoney;
   const balance = mainBalance - inputAddMoney;
   document.getElementById("mainBalance").innerText = balance;
@@ -37,13 +38,13 @@ document.getElementById("add-amount").addEventListener("click", function (e) {
   document.getElementById("donation-heading").innerText = heading;
   document.getElementById("donated-amount").innerText = inputAddMoney;
   document.getElementById("donation-modal").classList.remove("hidden");
-
-  // Close modal on button click
   document.getElementById("close-modal").addEventListener("click", function () {
     document.getElementById("donation-modal").classList.add("hidden");
   });
+  // Close modal on button click
 });
 
+// function 2
 document.getElementById("add-amount-2").addEventListener("click", function (e) {
   e.preventDefault();
   const inputAddMoney = getInputAddMoney("inputAddMoney-2");
@@ -60,6 +61,7 @@ document.getElementById("add-amount-2").addEventListener("click", function (e) {
     alert("You don't have enough money ");
     return;
   }
+  //There is addition, subtraction
   const myTotalAddAmount = myAddAmount + inputAddMoney;
   const balance = mainBalance - inputAddMoney;
   document.getElementById("mainBalance").innerText = balance;
@@ -82,12 +84,13 @@ document.getElementById("add-amount-2").addEventListener("click", function (e) {
   document.getElementById("donated-amount").innerText = inputAddMoney;
   document.getElementById("donation-modal").classList.remove("hidden");
 
-  // Close modal on button click
   document.getElementById("close-modal").addEventListener("click", function () {
     document.getElementById("donation-modal").classList.add("hidden");
   });
+  // Close modal on button click
 });
 
+// function 3
 document.getElementById("add-amount-3").addEventListener("click", function (e) {
   e.preventDefault();
   const inputAddMoney = getInputAddMoney("inputAddMoney-3");
@@ -104,6 +107,7 @@ document.getElementById("add-amount-3").addEventListener("click", function (e) {
     alert("You don't have enough money ");
     return;
   }
+  //There is addition, subtraction
   const myTotalAddAmount = myAddAmount + inputAddMoney;
   const balance = mainBalance - inputAddMoney;
   document.getElementById("mainBalance").innerText = balance;
@@ -125,9 +129,8 @@ document.getElementById("add-amount-3").addEventListener("click", function (e) {
   document.getElementById("donation-heading").innerText = heading;
   document.getElementById("donated-amount").innerText = inputAddMoney;
   document.getElementById("donation-modal").classList.remove("hidden");
-
-  // Close modal on button click
   document.getElementById("close-modal").addEventListener("click", function () {
     document.getElementById("donation-modal").classList.add("hidden");
   });
+  // Close modal on button click
 });

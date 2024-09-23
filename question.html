@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Four question</title>
+  </head>
+  <body>
+    <!-- navbar section -->
+    <div
+      class="fixed bg-white bg-opacity-70 shadow-md top-0 left-0 w-full z-50 border-gray-100"
+    >
+      <div class="navbar md:w-[1200px] md:mx-auto">
+        <div class="navbar-start">
+          <div class="dropdown">
+            <div
+              tabindex="0"
+              role="button"
+              class="btn btn-ghost lg:hidden"
+            ></div>
+          </div>
+          <a href="/index.html" class="btn bg-green-600 text-white px-10"
+            >Home</a
+          >
+        </div>
+        <div class="navbar-center hidden lg:flex">
+          <img src="assets/logo.png" alt="" />
+          <h1 class="font-bold text-2xl ml-3">Donate Bangladesh</h1>
+        </div>
+        <div class="navbar-end">
+          <img src="assets/coin.png" alt="" />
+          <h2 id="mainBalance" class="font-bold text-2xl">1300</h2>
+        </div>
+      </div>
+    </div>
+    <!-- main section -->
+    <div class="md:w-[1100px] md:mx-auto mt-52">
+      <h1 class="font-bold text-3xl md:text-6xl mb-7">important FAQ</h1>
+      <div class="collapse collapse-arrow bg-base-200">
+        <input type="radio" name="my-accordion-2" checked="checked" />
+        <div class="collapse-title text-xl font-medium">
+          What is dom in javascript?
+        </div>
+        <div class="collapse-content">
+          <p>
+            The DOM (Document Object Model) in JavaScript is a programming
+            interface for web documents, allowing you to interact with and
+            manipulate the structure and content of a webpage.
+          </p>
+        </div>
+      </div>
+      <div class="collapse collapse-arrow bg-base-200">
+        <input type="radio" name="my-accordion-2" />
+        <div class="collapse-title text-xl font-medium">
+          how do you select an element from the dom
+        </div>
+        <div class="collapse-content">
+          <p>
+            To select an element from the DOM in JavaScript, there are several
+            methods you can use depending on what you're trying to select. Here
+            are the most common methods: getElementById(),
+            getElementsByClassName(), getElementsByTagName(), querySelector(),
+            querySelectorAll()
+          </p>
+        </div>
+      </div>
+      <div class="collapse collapse-arrow bg-base-200">
+        <input type="radio" name="my-accordion-2" />
+        <div class="collapse-title text-xl font-medium">
+          what is even delegation in the context of the Dom, and why is it
+          usefull
+        </div>
+        <div class="collapse-content">
+          <p>
+            Event delegation is a technique where you handle events (like
+            clicks) on many elements (like buttons) by placing just one event
+            listener on their parent. This makes it easier and faster,
+            especially when you have many elements.
+          </p>
+        </div>
+      </div>
+      <div class="collapse collapse-arrow bg-base-200">
+        <input type="radio" name="my-accordion-2" />
+        <div class="collapse-title text-xl font-medium">
+          how do you manipulat an element's attributes and style using the dom
+        </div>
+        <div class="collapse-content">
+          <p>
+            Changing Attributes (like id, src, href): You can change the
+            attributes of an element (like an image’s src or a link’s href) with
+            two simple methods. a. Using setAttribute(): This method sets or
+            changes an attribute.
+          </p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

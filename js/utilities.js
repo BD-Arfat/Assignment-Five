@@ -17,6 +17,7 @@ function getShowContent(id) {
   document.getElementById(id).classList.remove("hidden");
 }
 
+// active button function
 function setActive(id) {
   document
     .getElementById("show-Donation-button")
@@ -31,8 +32,6 @@ function setActive(id) {
   document
     .getElementById("show-history-button")
     .classList.add("border", "border-green-600", "text-green-600");
-
-  // ক্লিক করা বাটনে active স্টাইল যোগ করে
   document
     .getElementById(id)
     .classList.remove("border", "border-green-600", "text-green-600");

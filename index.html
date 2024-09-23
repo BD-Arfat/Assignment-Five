@@ -13,72 +13,77 @@
   </head>
   <body class="w-[1200px] mx-auto">
     <!-- navbar section start -->
-    <div class="navbar bg-base-100">
-      <div class="navbar-start">
-        <div class="dropdown">
-          <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              class="h-5 w-5"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
+    <div
+      class="fixed bg-white bg-opacity-70 shadow-md top-0 left-0 w-full z-50 border-gray-100"
+    >
+      <div class="navbar w-[1200px] mx-auto">
+        <div class="navbar-start">
+          <div class="dropdown">
+            <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-5 w-5"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h8m-8 6h16"
+                />
+              </svg>
+            </div>
+            <ul
+              tabindex="0"
+              class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow"
             >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M4 6h16M4 12h8m-8 6h16"
-              />
-            </svg>
+              <li><a>Item 1</a></li>
+              <li>
+                <a>Parent</a>
+                <ul class="p-2">
+                  <li><a>Submenu 1</a></li>
+                  <li><a>Submenu 2</a></li>
+                </ul>
+              </li>
+              <li><a>Item 3</a></li>
+            </ul>
           </div>
-          <ul
-            tabindex="0"
-            class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow"
-          >
-            <li><a>Item 1</a></li>
-            <li>
-              <a>Parent</a>
-              <ul class="p-2">
-                <li><a>Submenu 1</a></li>
-                <li><a>Submenu 2</a></li>
-              </ul>
-            </li>
-            <li><a>Item 3</a></li>
-          </ul>
+          <a class="btn bg-green-600 text-white px-7">daisyUI</a>
         </div>
-        <a class="btn bg-green-600 text-white px-7">daisyUI</a>
+        <div class="navbar-center hidden lg:flex gap-2 items-center">
+          <img src="assets/logo.png" alt="" />
+          <h1 class="font-bold text-2xl">Donate Bangladesh</h1>
+        </div>
+        <div class="navbar-end flex gap-3 items-center">
+          <img src="assets/coin.png" alt="" />
+          <h2 id="mainBalance" class="font-bold text-2xl">1300</h2>
+        </div>
       </div>
-      <div class="navbar-center hidden lg:flex gap-2 items-center">
-        <img src="assets/logo.png" alt="" />
-        <h1 class="font-bold text-2xl">Donate Bangladesh</h1>
+      <!-- button section start -->
+      <div class="text-center mt-7 mb-5">
+        <button
+          id="show-Donation-button"
+          onclick="setActive('show-Donation-button')"
+          class="btn bg-green-600 text-white px-7 py-2 rounded focus:outline-none"
+        >
+          Donation
+        </button>
+        <button
+          id="show-history-button"
+          onclick="setActive('show-history-button')"
+          class="btn border border-green-600 text-green-600 px-7 py-2 rounded focus:outline-none"
+        >
+          History
+        </button>
       </div>
-      <div class="navbar-end flex gap-3 items-center">
-        <img src="assets/coin.png" alt="" />
-        <h2 id="mainBalance" class="font-bold text-2xl">1300</h2>
-      </div>
+      <!-- button section end -->
     </div>
     <!-- navbar section end -->
-    <!-- button section start -->
-    <div class="text-center mt-14">
-      <button
-        id="show-Donation-button"
-        onclick="setActive('show-Donation-button')"
-        class="btn bg-green-800 text-white px-7 py-2 rounded focus:outline-none"
-      >
-        Donation
-      </button>
-      <button
-        id="show-history-button"
-        onclick="setActive('show-history-button')"
-        class="btn bg-gray-800 hover:bg-none text-white px-7 py-2 rounded focus:outline-none"
-      >
-        History
-      </button>
-    </div>
-    <!-- button section end -->
+
     <!-- maine section start -->
-    <main id="donation-section" class="mt-20">
+    <main id="donation-section" class="mt-20 md:mt-52">
       <div class="flex gap-6">
         <div>
           <img src="assets/noakhali.png" alt="" />
@@ -214,7 +219,7 @@
       </div>
     </main>
     <!-- History section -->
-    <section id="history-section">
+    <section class="mt-10 md:mt-52" id="history-section">
       <div id="history-div-container"></div>
     </section>
     <!-- maine section end -->
